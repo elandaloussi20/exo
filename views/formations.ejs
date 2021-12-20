@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Formations</title>
+    </head>
+    <body>
+    <h1>IT Academy</h1>
+    <h2>Formations disponibles</h2>
+    <a href="/utilisateur/panier/:user"> Voir le panier</a>
+    <a href="/connection"> Se connecter</a>
+    <table>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Prix</th>
+    <th>Début</th>
+    <th>Fin</th>
+    <th></th>
+  </tr>
+  <% for (let i = 0 ; i < formations.length ; i++) { %>
+    <form action="/inscription/:user" method="POST">
+    <tr>
+    <th>
+    <input type="text" name="id" value="<%= formations[i].id  %>" />
+    </th>
+    <th>
+    <input type="text" name="Nom" value="<%= formations[i].Nom  %>" />
+    </th>
+    <th>
+    <input type="text" name="Prix" value="<%= formations[i].Prix  %>" />
+    </th>
+    <th>
+    <input type="text" name="Début" value="<%= formations[i].Début  %>" />
+    </th>
+    <th>
+    <input type="text" name="Fin" value="<%= formations[i].Fin  %>" />
+    </th>
+    <th>
+    <input type="submit"  name="s'inscrire" value="s'inscrire" />
+    </th>
+    </tr>
+    </form>
+    <% } %>
+
+
+
+</table>
+    </body>
+</html>
+
+
+

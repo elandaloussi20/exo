@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="/css/style.css">
+      <title>PANIER</title>
+    </head>
+    <body>
+    <h1>IT Academy</h1>
+    <h2>Panier</h2>
+    <a href="http://localhost:8000/finaliser"> Finaliser</a>
+    <a href="http://localhost:8000/retour">Retourner au catalogue des formations</a>
+    <table>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Prix</th>
+    <th>Début</th>
+    <th>Fin</th>
+    <th></th>
+  </tr>
+<% for (let i = 0 ; i < inscriptions.length ; i++) { %>
+  <tr>
+    <th>
+    <input type="text" name="id" value="<%= inscriptions[i]["id"] %>" />
+    </th>
+    <th>
+    <input type="text" name="Nom" value=" <%= inscriptions[i]["Nom"] %>" />
+    </th>
+    <th>
+    <input type="text" name="Prix" value="<%= inscriptions[i]["Prix"] %>" />
+    </th>
+    <th>
+    <input type="text" name="Début" value="<%= inscriptions[i]["Début"] %>>" />
+    </th>
+    <th>
+    <input type="text" name="Fin" value="<%= inscriptions[i]["Fin"] %>" />
+    </th>
+    <th>
+    <a href="http://localhost:8000/suppression/<%= i %>">supprimer</a>
+    </th>
+  </tr>
+<% } %>

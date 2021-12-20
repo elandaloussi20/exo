@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+              Title 
+        </title>
+    </head>
+      
+    <body>
+          <h1>Todo</h1>
+          <h2>Liste des tâches</h2>
+    
+    <% for (let i of list) {%>
+    <table>
+    <tr>
+        <%= i %>  
+            <a href="http://localhost:3000/delete?tache=<%= i %>">Effacer</a>
+         
+    </tr>
+    
+    <% } %>
+    
+    </table>      
+   
+
+<form method="get"  action="/" >
+<h2>Ajouter une tâche:</h2>
+<input type="text" name="tache" id="tache"/>
+<input type="submit" value="sauver" name="action" />
+
+</form>
+<p>
+<%= commentaire %>
+</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
