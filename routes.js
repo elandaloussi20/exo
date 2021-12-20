@@ -3,7 +3,7 @@ let router = express.Router();
 
 let paniercontroller = require ('./controllers/paniercontroller');
 
-router.get('/formation', paniercontroller.formationslist);
+router.get('/', paniercontroller.formationslist);
 router.post('/inscription/:user', paniercontroller.inscription);
 router.get('/connection', paniercontroller.connection);
 router.get('/login', paniercontroller.login);

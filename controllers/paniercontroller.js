@@ -29,7 +29,7 @@ exports.login = function(req, res){
 
     req.session.pseudo = req.query.pseudo;
     console.log(req.session);
-    res.redirect('/formation');
+    res.redirect('/');
 
 };
 exports.connection = function(req, res){
@@ -48,7 +48,7 @@ exports.inscription = function(req,res){
 
     let inscription = new panier(id,Nom,Prix,Début,Fin);
     panierlist.push(inscription);
-    res.redirect('/formation');
+    res.redirect('/');
 
 }
 
