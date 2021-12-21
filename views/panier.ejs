@@ -7,8 +7,8 @@
     <body>
     <h1>IT Academy</h1>
     <h2>Panier</h2>
-    <a href="http://localhost:8000/finaliser"> Finaliser</a>
-    <a href="http://localhost:8000/retour">Retourner au catalogue des formations</a>
+    <a href="/finaliser"> Finaliser</a>
+    <a href="/retour">Retourner au catalogue des formations</a>
     <table>
   <tr>
     <th>Id</th>
@@ -36,7 +36,7 @@
     <input type="text" name="Fin" value="<%= inscriptions[i]["Fin"] %>" />
     </th>
     <th>
-    <a href="http://localhost:8000/suppression/<%= i %>">supprimer</a>
+    <a href="/suppression/<%= i %>">supprimer</a>
     </th>
   </tr>
 <% } %>
